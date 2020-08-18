@@ -1,6 +1,6 @@
 .pad-bank {
-  width: 100px * 3 + 32;
-  height: 80px * 3 + 32;
+  width: 332px;
+  height: 272px;
   display: inline-block;
   margin: 20px;
 }

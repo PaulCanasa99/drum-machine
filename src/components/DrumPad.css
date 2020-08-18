@@ -5,10 +5,12 @@
   height: 80px;
   margin-right: 10px;
   border-radius: 5px;
-  padding-top: 35px;
+  padding-top: 28px;
   box-sizing: border-box;
   cursor: pointer;
-  background-color: grey;
+  background-color: rgb(101, 181, 218);
   margin-top: 10px;
   box-shadow: black 3px 3px 5px;
+  font-weight: bold;
+  font-size: 20px;
 }

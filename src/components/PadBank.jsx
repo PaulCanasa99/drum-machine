@@ -3,25 +3,35 @@ import DrumPad from './DrumPad';
 import './PadBank.css';
 class PadBank extends Component {
   render() {
-    return (
-      <div className="pad-bank">
-        <div className="row">
-          <DrumPad>f</DrumPad>
-          <DrumPad>f</DrumPad>
-          <DrumPad>f</DrumPad>
-        </div>
-        <div className="row">
-          <DrumPad>f</DrumPad>
-          <DrumPad>f</DrumPad>
-          <DrumPad>f</DrumPad>
-        </div>{' '}
-        <div className="row">
-          <DrumPad>f</DrumPad>
-          <DrumPad>f</DrumPad>
-          <DrumPad>f</DrumPad>
-        </div>
-      </div>
-    );
+    let padBank;
+    this.props.power
+      ? (padBank = this.props.currentPadBank.map((drumObj, i, padBankArr) => {
+          return (
+            <DrumPad
+              clipId={padBankArr[i].id}
+              clip={padBankArr[i].url}
+              keyTrigger={padBankArr[i].keyTrigger}
+              keyCode={padBankArr[i].keyCode}
+              updateDisplay={this.props.updateDisplay}
+              power={this.props.power}
+              clipVolume={this.props.clipVolume}
+            />
+          );
+        }))
+      : (padBank = this.props.currentPadBank.map((drumObj, i, padBankArr) => {
+          return (
+            <DrumPad
+              clipId={padBankArr[i].id}
+              clip="#"
+              keyTrigger={padBankArr[i].keyTrigger}
+              keyCode={padBankArr[i].keyCode}
+              updateDisplay={this.props.updateDisplay}
+              power={this.props.power}
+              clipVolume={this.props.clipVolume}
+            />
+          );
+        }));
+    return <div className="pad-bank">{padBank}</div>;
   }
 }
 

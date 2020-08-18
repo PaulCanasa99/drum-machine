@@ -2,14 +2,65 @@
   display: flex;
   padding-top: 15px;
   padding-bottom: 10px;
-  padding-left: 30px;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 600px;
-  outline: 5px solid orange;
+  height: 350px;
+}
+.inner-container {
+  outline: 5px solid rgba(0, 204, 255, 0.699);
   position: relative;
-  width: 660px;
+  width: 630px;
   text-align: center;
-  background-color: lighten(grey, 20%);
+  background-color: #4384c2;
+}
+.logo {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.controls-container {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin-left: 15px;
+}
+.control {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.select {
+  margin: auto;
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  background-color: black;
+}
+.inner {
+  width: 50%;
+  height: 100%;
+  background: red;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#display {
+  background-color: rgb(101, 181, 218);
+  margin: 15px auto;
+  box-shadow: black 3px 3px 5px;
+  border-radius: 2px;
+  font-weight: bold;
+  width: 200px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 650px) {
+  .inner-container {
+    transform: scale(0.7);
+  }
 }
