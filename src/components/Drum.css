@@ -1,0 +1,15 @@
+#drum-machine {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 600px;
+  outline: 5px solid orange;
+  position: relative;
+  width: 660px;
+  text-align: center;
+  background-color: lighten(grey, 20%);
+}
